@@ -1,0 +1,8 @@
+services:
+  app:
+    build:
+      context: .
+    volumes:
+      - .:/var/www/app
+    environment:
+      PHP_IDE_CONFIG: "serverName=Docker"
