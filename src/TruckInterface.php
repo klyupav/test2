@@ -4,7 +4,7 @@
 namespace App;
 
 
-interface TruckInterfaceBase extends BaseCarInterface
+interface TruckInterface extends BaseCarInterface
 {
     public function getBodyWidth(): float;
     public function getBodyHeight(): float;

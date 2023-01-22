@@ -4,7 +4,7 @@
 namespace App;
 
 
-interface SpecMachineInterfaceBase extends BaseCarInterface
+interface SpecMachineInterface extends BaseCarInterface
 {
     public function getExtra(): string;
 }

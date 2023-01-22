@@ -4,7 +4,7 @@
 namespace App;
 
 
-interface CarInterfaceBase extends BaseCarInterface
+interface CarInterface extends BaseCarInterface
 {
     public function getPassengerSeatsCount(): int;
 }
