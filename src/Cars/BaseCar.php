@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App;
+namespace App\Cars;
 
 
 abstract class BaseCar implements BaseCarInterface

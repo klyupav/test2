@@ -2,10 +2,13 @@
 
 namespace Tests;
 
-use App\CarInterface;
-use App\Parser;
-use App\SpecMachineInterface;
-use App\TruckInterface;
+use App\Cars\CarInterface;
+use App\CsvParser;
+use App\Cars\SpecMachineInterface;
+use App\Cars\TruckInterface;
+use App\Factories\CarFactory;
+use App\Factories\TruckFactory;
+use App\Factories\SpecMachineFactory;
 use PHPUnit\Framework\TestCase;
 
 class ParserTest extends TestCase
@@ -13,7 +16,12 @@ class ParserTest extends TestCase
 
     public function testGetCarList()
     {
-        $parser = new Parser();
+        $factories = [
+            new SpecMachineFactory(),
+            new TruckFactory(),
+            new CarFactory(),
+        ];
+        $parser = new CsvParser($factories);
         $carList = $parser->getCarList("tests/_data/data.csv");
         self::assertCount(5, $carList);
 

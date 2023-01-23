@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App;
+namespace App\Cars;
 
 
 interface TruckInterface extends BaseCarInterface

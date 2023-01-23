@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App;
+namespace App\Cars;
 
 
 interface CarInterface extends BaseCarInterface

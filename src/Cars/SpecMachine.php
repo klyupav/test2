@@ -1,15 +1,15 @@
 <?php
 
 
-namespace App;
+namespace App\Cars;
 
 
 final class SpecMachine extends BaseCar implements SpecMachineInterface
 {
     public function __construct(
         protected CarType $carType,
-        protected string $photoFileName,
         protected string $brand,
+        protected string $photoFileName,
         protected float $carrying,
         private string $extra
     ) {}

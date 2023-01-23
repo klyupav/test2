@@ -1,19 +1,19 @@
 <?php
 
 
-namespace App;
+namespace App\Cars;
 
 
 final class Truck extends BaseCar implements TruckInterface
 {
     public function __construct(
         protected CarType $carType,
-        protected string $photoFileName,
         protected string $brand,
-        protected float $carrying,
+        protected string $photoFileName,
         private float $bodyWidth,
         private float $bodyHeight,
-        private float $bodyLength
+        private float $bodyLength,
+        protected float $carrying,
     ) {}
 
     public function getBodyWidth(): float

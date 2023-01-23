@@ -1,17 +1,17 @@
 <?php
 
 
-namespace App;
+namespace App\Cars;
 
 
 final class Car extends BaseCar implements CarInterface
 {
     public function __construct(
         protected CarType $carType,
-        protected string $photoFileName,
         protected string $brand,
+        private int $passengerSeatsCount,
+        protected string $photoFileName,
         protected float $carrying,
-        private int $passengerSeatsCount
     ) {}
 
     public function getPassengerSeatsCount(): int
